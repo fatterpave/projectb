@@ -2,6 +2,21 @@
 	{
 		"id":0,
 		"name":"P1",
-		"type":2
+		"type":2,
+		"milestones":[
+			{
+				"type":0,
+				"date":"2018-06-01",
+				"progress":36,
+				"comments":[
+					"HEI","HEI2","HEI4"
+				]
+			}
+		]
+	},
+	{
+		"id":1,
+		"name":"P2",
+		"type":3
 	}
 ]
