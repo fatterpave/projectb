@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import FlatButton from 'material-ui/FlatButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import WebServices from './Webservices';
+import AppStore from './AppStore';
+import Main from './components/Main';
+
+const appStore = new AppStore();
+const webservices = new WebServices(appStore);
 
 class App extends Component {
   
@@ -35,6 +41,7 @@ class App extends Component {
           <MuiThemeProvider>
             <div>
               <FlatButton onClick={this.handleClick} label="Trykk" />
+              <Main appStore={appStore} webservices={webservices}/>
             </div>
           </MuiThemeProvider>
         </div>
