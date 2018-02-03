@@ -1,31 +1,31 @@
 [
-	{
-		"id":0,
-		"name":"P1",
-		"type":2,
-		"milestones":[
-			{
-				"date":"2018-06-01",
-				"type":1,
-				"progress":20,
-				"comments":[
-					"implementert xl",
-					"webservice po",
-					"test"
-				]
-			},
-			{
-				"date":"2018-08-01",
-				"type":2,
-				"progress":0
-			}
-		],
-		"contributors":[
-			1,2,3
-		],
-	},
-	{
-		"name":"P2",
-		"id":1
-	}
+{
+	"id":0,
+	"name":"P1",
+	"type":2,
+	"milestones":[
+		{
+			"date":"2018-06-01",
+			"type":1,
+			"progress":20,
+			"comments":[
+				"implementert xl",
+				"webservice po",
+				"test"
+			]
+		},
+		{
+			"date":"2018-08-01",
+			"type":2,
+			"progress":0
+		}	
+	],
+	"contributors":[
+		1,2,3
+	],
+},
+{
+	"name":"P2",
+	"id":1
+}
 ]
