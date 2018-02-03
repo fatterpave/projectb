@@ -11,15 +11,16 @@ class App extends Component {
   };
   
   getData = () => {
-      fetch(`/api/food?q=hash+browns`, {
+    
+      fetch('https://raw.githubusercontent.com/fatterpave/projectb/master/data/contributors.json', {
         accept: 'application/json',
       })
       .then(res=>res.json())
       .then(json=>{
-          alert(json[0].carbohydrate_g);
+          alert(json[0].name);
       })
       .catch(err=>{
-          console.error("Error getting user data",err);
+          console.error("Error getting user data >>\n",err);
       });
   };
 

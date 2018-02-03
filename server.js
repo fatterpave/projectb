@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const sqlite = require('sql.js');
-
+import fetch from 'isomorphic-fetch'
 const filebuffer = fs.readFileSync('db/usda-nnd.sqlite3');
 
 const db = new sqlite.Database(filebuffer);
@@ -24,6 +24,24 @@ const COLUMNS = [
   'kcal',
   'description',
 ];
+
+app.get('/api/projects', (req,res) => {
+  console.log(">>>>>>");
+  
+  fetch(`https://raw.githubusercontent.com/fatterpave/projectb/master/data/projects.json`, {
+        accept: 'application/json',
+      })
+      .then(res=>res.json())
+      .then(json=>{
+         return json;
+      })
+      .catch(err=>{
+          console.error("Error getting user data",err);
+      });
+});
+
+
+
 app.get('/api/food', (req, res) => {
   const param = req.query.q;
 
