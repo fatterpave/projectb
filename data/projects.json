@@ -11,6 +11,14 @@
 				"comments":[
 					"HEI","HEI2","HEI4"
 				]
+			},
+			{
+				"type":1,
+				"date":"2018-08-01",
+				"progress":0,
+				"comments":[
+					"HEI"
+				]
 			}
 		],
 		"contributors":[
@@ -20,6 +28,19 @@
 	{
 		"id":1,
 		"name":"P2",
-		"type":3
+		"type":3,
+		"milestones":[
+			{
+				"type":2,
+				"date":"2018-07-01",
+				"progress":80,
+				"comments":[
+					"erfd","HEdfdI2","dddHEI4"
+				]
+			}
+		],
+		"contributors":[
+			1,2,3
+		]
 	}
 ]
