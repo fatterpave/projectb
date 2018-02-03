@@ -12,7 +12,7 @@ class App extends Component {
   
   getData = () => {
     
-      fetch('https://raw.githubusercontent.com/fatterpave/projectb/master/data/contributors.json', {
+      fetch('https://raw.githubusercontent.com/fatterpave/projectb/master/data/projecttypes.json', {
         accept: 'application/json',
       })
       .then(res=>res.json())
