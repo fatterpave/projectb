@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FlatButton from 'material-ui/FlatButton';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
+  
+  handleClick = (value) => {
+       this.getData();
+  };
+  
+  getData = () => {
+      fetch(`/api/food?q=hash+browns`, {
+        accept: 'application/json',
+      })
+      .then(res=>res.json())
+      .then(json=>{
+          alert(json[0].carbohydrate_g);
+      })
+      .catch(err=>{
+          console.error("Error getting user data",err);
+      });
+  };
+
   render() {
     return (
       <div className="App">
@@ -10,9 +30,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div>
+          <MuiThemeProvider>
+            <div>
+              <FlatButton onClick={this.handleClick} label="Trykk" />
+            </div>
+          </MuiThemeProvider>
+        </div>
       </div>
     );
   }
