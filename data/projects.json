@@ -2,7 +2,7 @@
 	{
 		"id":0,
 		"name":"P1",
-		"type":2
+		"type":2,
 		"milestones":[
 			{
 				"date":"2018-06-01",
