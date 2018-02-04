@@ -6,13 +6,10 @@ export default class WebServices extends Component {
 
     constructor(args){
         super(args);
-        this.state = {
-            appStore:args.appStore;
-        }
     }
 
     getProjects = () => {
-        fetch(this.state.appStore.projectUrl, {
+        fetch(this.props.projectUrl, {
             accept: 'application/json',
         })
         .then(res=>res.json())
